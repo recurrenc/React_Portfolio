@@ -6,7 +6,7 @@ export const greetings = {
   name: "Sonu Kumar",
   title: "Hi all, I'm Sonu",
   description:
-    "A passionate Full Stack Web Developer and Mobile App Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs / Java  and some other cool libraries and frameworks and Cross Platform Mobile Apps With React Native.",
+    "I offer my expertise in web development - both front-end (including UI design, HTML, CSS, JavaScript, React, Next & other frameworks) and back-end (Node.js, Express.js) with Database support by MongoDB, as well as Electron-based Desktop Application development and React Native based Cross-Plateform Mobule Application.",
   resumeLink:
     "https://drive.google.com/file/d/1RYc7biZhnmDmiiR8blUmCFgDH6EHhEvX/view?usp=sharing",
 };
