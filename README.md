@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# developer-portfolio <a href="https://github.com/SonuKumar81800/React_Portfolio/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/SonuKumar81800/React_Portfolio"></a><a href="https://github.com/SonuKumar81800/React_Portfolio/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/SonuKumar81800/React_Portfolio"></a><a href="https://github.com/SonuKumar81800/React_Portfolio/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/SonuKumar81800/React_Portfolio"></a> <a href="https://github.com/SonuKumar81800/React_Portfolio/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/SonuKumar81800/React_Portfolio"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Software Developer Portfolio Template built with react.js bootstrap that helps you showcase your work and skills as a software developer.
 
-## Available Scripts
+<p align="center">
+  <kbd>
+    <img src="https://github.com/SonuKumar81800/React_Portfolio/blob/main/template.png"></img>
+  </kbd>
+</p>
 
-In the project directory, you can run:
+### To view a live example, **[Click here](https://portfolio-sonukumar.vercel.app/)**.
 
-### `npm start`
+Just Edit `src/portfolio.js` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+But if you want to **contribute** and make this much better for other developer have a look at [Issues](https://github.com/SonuKumar81800/React_Portfolio/issues).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If you created something awesome and want to contribute then feel free to open an [pull request](https://github.com/SonuKumar81800/React_Portfolio/pulls).
 
-### `npm test`
+## Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Sections](#sections)
+- [Getting Started](#getting-started)
+- [How to Use](#how-to-use)
+- [Linking portfolio to Github](#linking-portfolio-to-github)
+- [Change and Customize](#change-and-customize-every-section-according-to-your-need)
+- [Technologies Used](#technologies-used)
+- [Illustrations](#illustrations)
+- [For the Future](#for-the-future)
+- [Contributors](#project-maintainers)
 
-### `npm run build`
+## Sections
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✔️ Summary and About me\
+✔️ Skills\
+✔️ Education\
+✔️ Work Experience\
+✔️ Projects\
+✔️ Github Profile
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### `npm run eject`
+You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
+<br>
+**For Windows** Install Visual C++ Build Environment: [Visual Studio Build Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+node@v10.16.0 or higher
+npm@6.9.0 or higher
+git@2.17.1 or higher
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How To Use
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+From your command line, clone and run developer-portolio:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# Clone this repository
+$ git clone https://github.com/SonuKumar81800/React_Portfolio.git
 
-## Learn More
+# Go into the repository
+$ cd React_Portfolio
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Install dependencies
+$ npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#Start's development server
+$ npm start
+```
 
-### Code Splitting
+## Linking Portfolio to Github
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```javascript
+  //  portfolio.js
+  githubUserName: 'YOUR GITHUB USERNAME HERE',
+```
 
-### Analyzing the Bundle Size
+#### Using Emojis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For adding emoji 😃 into the texts in `Portfolio.js`, use the `emoji()` function and pass the text you need as an argument. This would help in keeping emojis compatible across different browsers and platforms.
 
-### Making a Progressive Web App
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React](https://reactjs.org/)
+- [axios](https://www.npmjs.com/package/axios)
+- [reactstrap](https://reactstrap.github.io/)
+- [react-reveal](https://www.react-reveal.com/)
+- [react-lottie](https://www.npmjs.com/package/react-lottie)
+- [react-easy-emoji](https://github.com/appfigures/react-easy-emoji)
+- [react-headroom](https://github.com/KyleAMathews/react-headroom)
+- [color-thief](https://github.com/lokesh/color-thief)
 
-### Advanced Configuration
+## Illustrations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [Lottie File Source](https://lottiefiles.com)
 
-### Deployment
+## For the Future
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/saadpasta/developerFolio/pulls).
 
-### `npm run build` fails to minify
+- Enable Dark Mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add More Sections
+
+- Add Feedback Section Dynamic
