@@ -163,6 +163,28 @@ export const experience = [
       "Manage DSC-GGV official Website and events update.",
     ],
   },
+  {
+    role: "Web Developer",
+    company: "Developer Student Club",
+    companylogo: dsclogo,
+    date: "June 2020 – Present",
+    desc: "Joined Developer Student Club as a Member of Web/Android Club in July 2020.",
+    descBullets: [
+      "Feedback System Designed and Developed for Guru Ghasidas University where students can give their feedback about professors. And University Administrator can take Action on the basis of these feedbacks Statistics.",
+      "Manage DSC-GGV official Website and events update.",
+    ],
+  },
+  {
+    role: "Web Developer",
+    company: "Developer Student Club",
+    companylogo: dsclogo,
+    date: "June 2020 – Present",
+    desc: "Joined Developer Student Club as a Member of Web/Android Club in July 2020.",
+    descBullets: [
+      "Feedback System Designed and Developed for Guru Ghasidas University where students can give their feedback about professors. And University Administrator can take Action on the basis of these feedbacks Statistics.",
+      "Manage DSC-GGV official Website and events update.",
+    ],
+  },
 ];
 
 export const projects = [
