@@ -6,7 +6,7 @@ export const greetings = {
   name: "Sonu Kumar",
   title: "Hi all, I'm Sonu",
   description:
-    "I offer my expertise in web development - both front-end (including UI design, HTML, CSS, JavaScript, React, Next & other frameworks) and back-end (Node.js, Express.js) with Database support by MongoDB, as well as Electron-based Desktop Application development and React Native based Cross-Plateform Mobule Application.",
+    "I offer my expertise in web development - both front-end (including UI design, HTML, CSS, JavaScript, React, Next & other frameworks) and back-end (Node.js, Express.js) with Database support by MongoDB, as well as Electron-based Desktop Application development and React Native based Cross-Plateform Mobile Application.",
   resumeLink:
     "https://drive.google.com/file/d/1RYc7biZhnmDmiiR8blUmCFgDH6EHhEvX/view?usp=sharing",
 };
