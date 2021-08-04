@@ -26,11 +26,12 @@ const FollowersCard = ({ follower }) => {
 
   console.log(followerProfile);
   return (
-    <>
+    <div style={{ margin: "10px" }}>
       <Card>
         <CardImg
           top
-          width="100%"
+          width="90%"
+          style={{ borderRadius: "50%", padding: "30px 30px 0px 30px" }}
           src={followerProfile.avatar_url}
           alt="Card image cap"
         />
@@ -56,7 +57,7 @@ const FollowersCard = ({ follower }) => {
           </Button>
         </CardBody>
       </Card>
-    </>
+    </div>
   );
 };
 
