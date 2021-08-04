@@ -12,16 +12,18 @@ import {
 } from "reactstrap";
 
 const FollowersCard = ({ follower }) => {
+  const quary = `https://api.github.com/users/${follower}`;
   const [followerProfile, setFollowerProfile] = useState([]);
-  async function getProfileData() {
+  const getFollowerData = async (q) => {
     //"https://api.github.com/users/SonuKumar81800/followers"
-    await get(`https://api.github.com/users/${follower}`)
+    await get(q)
       .then((res) => setFollowerProfile(res.data))
       .catch((err) => console.log(err));
-  }
+  };
   useEffect(() => {
-    getProfileData();
-  }, []);
+    getFollowerData(quary);
+  }, [quary]);
+
   console.log(followerProfile);
   return (
     <>
@@ -33,15 +35,25 @@ const FollowersCard = ({ follower }) => {
           alt="Card image cap"
         />
         <CardBody>
-          <CardTitle tag="h5">Card title</CardTitle>
+          <CardTitle tag="h5">
+            {followerProfile.name
+              ? followerProfile.name
+              : followerProfile.login}
+          </CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">
-            Card subtitle
+            {followerProfile.login}
           </CardSubtitle>
           <CardText>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
+            {followerProfile.bio
+              ? followerProfile.bio
+              : `Hey, I am a creative person with enthusiasm for computer-related stuff. I am a computer science and engineering undergraduate with a curiosity for learning new technology`}
           </CardText>
-          <Button className="bg-gradient-blue text-white">Profile</Button>
+          <Button
+            href={followerProfile.html_url}
+            className="bg-gradient-blue text-white"
+          >
+            Profile
+          </Button>
         </CardBody>
       </Card>
     </>
