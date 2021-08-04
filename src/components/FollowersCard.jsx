@@ -44,11 +44,20 @@ const FollowersCard = ({ follower }) => {
           <CardSubtitle tag="h6" className="mb-2 text-muted">
             {followerProfile.login}
           </CardSubtitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">
+            {followerProfile.location
+              ? followerProfile.location
+              : "Unknown Location"}
+          </CardSubtitle>
           <CardText>
             {followerProfile.bio
               ? followerProfile.bio
               : `Hey, I am a creative person with enthusiasm for computer-related stuff. I am a computer science and engineering undergraduate with a curiosity for learning new technology`}
           </CardText>
+          <p>
+            {`Followers : ${followerProfile.followers}   Following : ${followerProfile.following}`}
+          </p>
+          <p>{`Public Repository : ${followerProfile.public_repos}`}</p>
           <Button
             href={followerProfile.html_url}
             className="bg-gradient-blue text-white"
