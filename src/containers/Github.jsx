@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import Loading from "../components/Loading";
+import { openSource } from "../portfolio";
+import { get } from "axios";
 import classnames from "classnames";
 // reactstrap components
 import {
@@ -15,8 +18,20 @@ import {
 
 import FollowersCard from "../components/FollowersCard";
 
-const Github = ({ prof }) => {
+const Github = () => {
   const [state, setState] = useState({ tabs: 1 });
+  const [followers, setFollowers] = useState([]);
+  async function getProfileData() {
+    //"https://api.github.com/users/SonuKumar81800/followers"
+    await get(
+      `https://api.github.com/users/${openSource.githubUserName}/followers`
+    )
+      .then((res) => setFollowers(res.data))
+      .catch((err) => console.log(err));
+  }
+  useEffect(() => {
+    getProfileData();
+  }, [state]);
 
   const toggleNavs = (e, state, index) => {
     e.preventDefault();
@@ -85,15 +100,14 @@ const Github = ({ prof }) => {
             <TabContent activeTab={"tabs" + state.tabs}>
               <TabPane tabId="tabs1">
                 <CardColumns>
-                  <FollowersCard />
-                  <FollowersCard />
-                  <FollowersCard />
-                  <FollowersCard />
-                  <FollowersCard />
-                  <FollowersCard />
-                  <FollowersCard />
-                  <FollowersCard />
-                  <FollowersCard />
+                  <Suspense fallback={<Loading />}>
+                    {followers.map((follower) => (
+                      <FollowersCard
+                        key={follower.id}
+                        follower={follower.login}
+                      />
+                    ))}
+                  </Suspense>
                 </CardColumns>
               </TabPane>
               <TabPane tabId="tabs2">

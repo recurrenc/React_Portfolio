@@ -1,7 +1,5 @@
-import React, { useState, useEffect, Suspense } from "react";
-import { openSource } from "../portfolio";
+import React, { useState, useEffect } from "react";
 import { get } from "axios";
-import Loading from "../components/Loading";
 
 import {
   Card,
@@ -14,23 +12,24 @@ import {
 } from "reactstrap";
 
 const FollowersCard = ({ follower }) => {
-  const [prof, setProf] = useState({});
+  const [followerProfile, setFollowerProfile] = useState([]);
   async function getProfileData() {
-    await get(`https://api.github.com/users/${openSource.githubUserName}`)
-      .then((res) => setProf(res.data))
+    //"https://api.github.com/users/SonuKumar81800/followers"
+    await get(`https://api.github.com/users/${follower}`)
+      .then((res) => setFollowerProfile(res.data))
       .catch((err) => console.log(err));
   }
   useEffect(() => {
     getProfileData();
-  });
-
+  }, []);
+  console.log(followerProfile);
   return (
     <>
       <Card>
         <CardImg
           top
           width="100%"
-          src="../assets/img/google.svg"
+          src={followerProfile.avatar_url}
           alt="Card image cap"
         />
         <CardBody>
