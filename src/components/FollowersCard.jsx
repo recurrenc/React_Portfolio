@@ -26,7 +26,7 @@ const FollowersCard = ({ follower }) => {
 
   console.log(followerProfile);
   return (
-    <div style={{ margin: "10px" }}>
+    <>
       <Card>
         <CardImg
           top
@@ -62,11 +62,11 @@ const FollowersCard = ({ follower }) => {
             href={followerProfile.html_url}
             className="bg-gradient-blue text-white"
           >
-            Profile
+            Visit Profile
           </Button>
         </CardBody>
       </Card>
-    </div>
+    </>
   );
 };
 
