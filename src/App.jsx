@@ -11,6 +11,7 @@ import Projects from "./containers/Projects";
 import GithubProfile from "./containers/GithubProfile";
 import Github from "./containers/Github";
 import Feedbacks from "./containers/Feedbacks";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
               <Feedbacks />
               <Projects />
               <GithubProfile />
+              <ScrollToTop />
             </>
           )}
         />
@@ -41,6 +43,7 @@ const App = () => {
               <Navigation />
               <GithubProfile />
               <Github />
+              <ScrollToTop />
             </>
           )}
         />
