@@ -3,8 +3,10 @@ import "./GithubRepoCard.css";
 import Grid from "@material-ui/core/Grid";
 import { Fade } from "react-reveal";
 import { useEffect, useState } from "react";
+import { Button } from "reactstrap";
 
 export default function GithubRepoCard({ repo, isDark }) {
+  // console.log(repo);
   const [date, setDate] = useState();
 
   useEffect(() => {
@@ -14,18 +16,18 @@ export default function GithubRepoCard({ repo, isDark }) {
     setDate(date);
   }, [repo]);
   // if(repo.updated_at) const date = new Date(repo.updated_at) "Loading...";
-  function openRepoinNewTab(url) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
+  // function openRepoinNewTab(url) {
+  //   var win = window.open(url, "_blank");
+  //   win.focus();
+  // }
 
   return (
     <Grid item xs={12} sm={6}>
       <Fade bottom duration={1000} distance="20px">
         <div
           className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
-          key={"repo.node.id"}
-          onClick={() => openRepoinNewTab("repo.node.url")}
+          key={repo.id}
+          // onClick={() => openRepoinNewTab({repo.html_url})}
         >
           <div className="repo-name-div">
             <svg
@@ -96,6 +98,16 @@ export default function GithubRepoCard({ repo, isDark }) {
               <p>{repo.size} KB</p>
             </div>
           </div>
+          <Button
+            className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
+            color="default"
+            href={repo.html_url}
+          >
+            <span className="btn-inner--icon mr-1">
+              <i className="fa fa-github" />
+            </span>
+            <span className="btn-inner--text">Visit Repository</span>
+          </Button>
         </div>
       </Fade>
     </Grid>
