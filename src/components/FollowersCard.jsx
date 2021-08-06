@@ -24,7 +24,6 @@ const FollowersCard = ({ follower }) => {
     getFollowerData(quary);
   }, [quary]);
 
-  console.log(followerProfile);
   return (
     <>
       <Card>

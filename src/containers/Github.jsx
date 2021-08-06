@@ -19,11 +19,22 @@ import {
 import FollowersCard from "../components/FollowersCard";
 import GithubRepoCard from "../components/GithubRepo/GithubRepoCard";
 
-import Grid from "@material-ui/core/Grid";
-
 const Github = () => {
   const [state, setState] = useState({ tabs: 1 });
   const [followers, setFollowers] = useState([]);
+  const [repo, setRepo] = useState([
+    {
+      name: "",
+      description: "",
+      language: "",
+      forks_count: 0,
+      stargazers_count: 0,
+      size: 0,
+    },
+  ]);
+
+  const repoUrl = `https://api.github.com/users/${openSource.githubUserName}/repos`;
+
   async function getProfileData() {
     //"https://api.github.com/users/SonuKumar81800/followers"
     await get(
@@ -32,9 +43,17 @@ const Github = () => {
       .then((res) => setFollowers(res.data))
       .catch((err) => console.log(err));
   }
+
+  async function getRepoData(u) {
+    await get(u)
+      .then((res) => setRepo(res.data))
+      .catch((err) => console.log(err));
+  }
+
   useEffect(() => {
     getProfileData();
-  }, [state]);
+    getRepoData(repoUrl);
+  }, [state, repoUrl]);
 
   const toggleNavs = (e, state, index) => {
     e.preventDefault();
@@ -114,18 +133,11 @@ const Github = () => {
                 </CardColumns>
               </TabPane>
               <TabPane tabId="tabs2">
-                {/* {repo.map((v, i) => {
-                  return ( */}
-
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-
-                {/* );
-                })} */}
+                <div style={{ display: "flex", flexWrap: "wrap" }}>
+                  {repo.map((v) => {
+                    return <GithubRepoCard key={v.id} repo={v} />;
+                  })}
+                </div>
               </TabPane>
               <TabPane tabId="tabs3">
                 <p className="description">
