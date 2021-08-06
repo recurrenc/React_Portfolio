@@ -19,6 +19,8 @@ import {
 import FollowersCard from "../components/FollowersCard";
 import GithubRepoCard from "../components/GithubRepo/GithubRepoCard";
 
+import Grid from "@material-ui/core/Grid";
+
 const Github = () => {
   const [state, setState] = useState({ tabs: 1 });
   const [followers, setFollowers] = useState([]);
@@ -114,30 +116,14 @@ const Github = () => {
               <TabPane tabId="tabs2">
                 {/* {repo.map((v, i) => {
                   return ( */}
+
                 <GithubRepoCard />
                 <GithubRepoCard />
                 <GithubRepoCard />
                 <GithubRepoCard />
                 <GithubRepoCard />
                 <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
-                <GithubRepoCard />
+
                 {/* );
                 })} */}
               </TabPane>

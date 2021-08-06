@@ -1,5 +1,6 @@
 import React from "react";
 import "./GithubRepoCard.css";
+import Grid from "@material-ui/core/Grid";
 import { Fade } from "react-reveal";
 
 export default function GithubRepoCard({ repo, isDark }) {
@@ -9,8 +10,8 @@ export default function GithubRepoCard({ repo, isDark }) {
   }
 
   return (
-    <Fade bottom duration={1000} distance="20px">
-      <div>
+    <Grid item xs={12} sm={6}>
+      <Fade bottom duration={1000} distance="20px">
         <div
           className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
           key={"repo.node.id"}
@@ -84,7 +85,7 @@ export default function GithubRepoCard({ repo, isDark }) {
             </div>
           </div>
         </div>
-      </div>
-    </Fade>
+      </Fade>
+    </Grid>
   );
 }
