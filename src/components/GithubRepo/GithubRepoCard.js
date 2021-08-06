@@ -10,8 +10,14 @@ export default function GithubRepoCard({ repo, isDark }) {
   const [date, setDate] = useState();
 
   useEffect(() => {
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
     const date = repo.updated_at
-      ? new Date(repo.updated_at).toLocaleTimeString()
+      ? new Date(repo.updated_at).toLocaleDateString("en-IN", options)
       : "Loding...";
     setDate(date);
   }, [repo]);
