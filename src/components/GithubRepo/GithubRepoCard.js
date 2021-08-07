@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { Button } from "reactstrap";
 
 export default function GithubRepoCard({ repo, isDark }) {
-  // console.log(repo);
   const [date, setDate] = useState();
 
   useEffect(() => {
@@ -21,11 +20,6 @@ export default function GithubRepoCard({ repo, isDark }) {
       : "Loding...";
     setDate(date);
   }, [repo]);
-  // if(repo.updated_at) const date = new Date(repo.updated_at) "Loading...";
-  // function openRepoinNewTab(url) {
-  //   var win = window.open(url, "_blank");
-  //   win.focus();
-  // }
 
   return (
     <Grid item xs={12} sm={6}>
@@ -33,7 +27,6 @@ export default function GithubRepoCard({ repo, isDark }) {
         <div
           className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
           key={repo.id}
-          // onClick={() => openRepoinNewTab({repo.html_url})}
         >
           <div className="repo-name-div">
             <svg
@@ -52,7 +45,6 @@ export default function GithubRepoCard({ repo, isDark }) {
             <p className="repo-name">{repo.name}</p>
           </div>
           <p className="repo-description">{repo.description}</p>
-          {/* <p>{`${date.getHours()}: ${date.getMinutes()}`}</p> */}
           <p>Last Update: {date}</p>
           <div className="repo-stats">
             <div className="repo-left-stat">
