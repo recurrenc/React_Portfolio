@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { get } from "axios";
+import "./FollowerCard.css";
 
 import {
   Card,
@@ -49,9 +50,11 @@ const FollowersCard = ({ follower }) => {
               : "Unknown Location"}
           </CardSubtitle>
           <CardText>
-            {followerProfile.bio
-              ? followerProfile.bio
-              : `Hey, I am a creative person with enthusiasm for computer-related stuff. I am a computer science and engineering undergraduate with a curiosity for learning new technology`}
+            <p className="descriptionPara">
+              {followerProfile.bio
+                ? followerProfile.bio
+                : `Hey, I am a creative person with enthusiasm for computer-related stuff. I am a computer science and engineering undergraduate with a curiosity for learning new technology`}
+            </p>
           </CardText>
           <p>
             {`Followers : ${followerProfile.followers}   Following : ${followerProfile.following}`}
