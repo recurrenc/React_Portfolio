@@ -59,7 +59,11 @@ const FollowersCard = ({ follower }) => {
           <p>
             {`${followerProfile.followers} Followers, ${followerProfile.following} Following`}
           </p>
-          <p>{`${followerProfile.public_repos} Public Repositories`}</p>
+          <p>
+            {followerProfile.followers ?
+              `${followerProfile.public_repos} Public ${followerProfile.public_repos === 1 ? "Repository" : "Repositories"}` :
+              "No Public Repositories"}
+          </p>
           <Button
             href={followerProfile.html_url}
             className="bg-gradient-blue text-white"
