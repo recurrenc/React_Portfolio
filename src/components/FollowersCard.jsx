@@ -13,7 +13,7 @@ import {
 } from "reactstrap";
 
 const FollowersCard = ({ follower }) => {
-  const quary = `https://api.github.com/users/${follower}`;
+  const query = `https://api.github.com/users/${follower}`;
   const [followerProfile, setFollowerProfile] = useState([]);
   const getFollowerData = async (q) => {
     //"https://api.github.com/users/SonuKumar81800/followers"
@@ -22,8 +22,8 @@ const FollowersCard = ({ follower }) => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    getFollowerData(quary);
-  }, [quary]);
+    getFollowerData(query);
+  }, [query]);
 
   return (
     <>
@@ -57,9 +57,13 @@ const FollowersCard = ({ follower }) => {
             </p>
           </CardText>
           <p>
-            {`Followers : ${followerProfile.followers}   Following : ${followerProfile.following}`}
+            {`${followerProfile.followers} ${followerProfile.followers === 1 ? "Follower" : "Followers"}, ${followerProfile.following} Following`}
           </p>
-          <p>{`Public Repository : ${followerProfile.public_repos}`}</p>
+          <p>
+            {followerProfile.public_repos ?
+              `${followerProfile.public_repos} Public ${followerProfile.public_repos === 1 ? "Repository" : "Repositories"}` :
+              "No Public Repositories"}
+          </p>
           <Button
             href={followerProfile.html_url}
             className="bg-gradient-blue text-white"
