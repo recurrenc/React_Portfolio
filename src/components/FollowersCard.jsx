@@ -57,7 +57,7 @@ const FollowersCard = ({ follower }) => {
             </p>
           </CardText>
           <p>
-            {`${followerProfile.followers} Followers, ${followerProfile.following} Following`}
+            {`${followerProfile.followers} ${followerProfile.followers === 1 ? "Follower" : "Followers"}, ${followerProfile.following} Following`}
           </p>
           <p>
             {followerProfile.public_repos ?
