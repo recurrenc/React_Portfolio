@@ -13,7 +13,7 @@ import {
 } from "reactstrap";
 
 const FollowersCard = ({ follower }) => {
-  const quary = `https://api.github.com/users/${follower}`;
+  const query = `https://api.github.com/users/${follower}`;
   const [followerProfile, setFollowerProfile] = useState([]);
   const getFollowerData = async (q) => {
     //"https://api.github.com/users/SonuKumar81800/followers"
@@ -22,8 +22,8 @@ const FollowersCard = ({ follower }) => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    getFollowerData(quary);
-  }, [quary]);
+    getFollowerData(query);
+  }, [query]);
 
   return (
     <>
