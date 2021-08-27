@@ -83,6 +83,18 @@ const Navigation = () => {
                 <NavItem>
                   <NavLink
                     className="nav-link-icon"
+                    href={socialLinks.youtube}
+                    target="_blank"
+                  >
+                    <i className="fa fa-youtube-square" />
+                    <span className="nav-link-inner--text d-lg-none ml-2">
+                      Youtube
+                    </span>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    className="nav-link-icon"
                     href={socialLinks.facebook}
                     target="_blank"
                   >

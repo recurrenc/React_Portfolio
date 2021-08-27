@@ -10,7 +10,7 @@ const SocialLinks = () => {
       <Button
         className="btn-icon-only rounded-circle"
         color="youtube"
-        href="https://www.youtube.com/channel/UCTZbxmX_heRWbbopfPvoHQA"
+        href={socialLinks.youtube}
         target="_blank"
       >
         <span className="btn-inner--icon">
