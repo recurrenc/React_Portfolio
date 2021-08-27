@@ -18,6 +18,7 @@ export const openSource = {
 export const contact = {};
 
 export const socialLinks = {
+  youtube: "https://www.youtube.com/channel/UCTZbxmX_heRWbbopfPvoHQA",
   facebook: "https://www.facebook.com/sonukumar81800/",
   instagram: "https://www.instagram.com/__.__s.o.n.u__.__/",
   twitter: "https://twitter.com/sonukum27391549",

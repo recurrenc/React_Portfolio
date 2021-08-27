@@ -40,7 +40,7 @@ const Greetings = () => {
                     <p className="lead text-white">{greetings.description}</p>
                     <SocialLinks />
                     <div className="btn-wrapper my-4">
-                      <Button
+                      {/* <Button
                         className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
                         color="default"
                         href={greetings.resumeLink}
@@ -49,6 +49,16 @@ const Greetings = () => {
                           <i className="fa fa-file" />
                         </span>
                         <span className="btn-inner--text">See My Resume</span>
+                      </Button> */}
+                      <Button
+                        className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
+                        color="default"
+                        href="/blog"
+                      >
+                        <span className="btn-inner--icon mr-1">
+                          <i className="fa fa-file" />
+                        </span>
+                        <span className="btn-inner--text">Visit My Blog</span>
                       </Button>
                       <Button
                         className="btn-white btn-icon mb-3 mb-sm-0 ml-1"

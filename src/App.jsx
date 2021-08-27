@@ -12,6 +12,7 @@ import GithubProfile from "./containers/GithubProfile";
 import Github from "./containers/Github";
 import Feedbacks from "./containers/Feedbacks";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Blog from "./components/Blogs/Blog";
 
 const App = () => {
   return (
@@ -43,6 +44,18 @@ const App = () => {
               <Navigation />
               <GithubProfile />
               <Github />
+              <ScrollToTop />
+            </>
+          )}
+        />
+        <Route
+          path="/blog"
+          exact
+          render={(props) => (
+            <>
+              <Navigation />
+              <GithubProfile />
+              <Blog />
               <ScrollToTop />
             </>
           )}
