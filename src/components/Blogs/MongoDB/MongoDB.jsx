@@ -96,7 +96,7 @@ export default function MongoDB() {
           </p>
           <p className="description">
             I will assume that you are working inside a collection named
-            'comments' on a MongoDB database of your choice
+            'collection' on a MongoDB database of your choice
           </p>
 
           <h3 className="title">1. All Database Commands</h3>
