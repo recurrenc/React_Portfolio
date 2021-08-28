@@ -23,6 +23,9 @@ const LineNo = styled.span`
 `;
 
 const LineContent = styled.span`
+  font-size: 16px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
   display: table-cell;
 `;
 

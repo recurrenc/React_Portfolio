@@ -6,7 +6,7 @@ const CodeTemplate = ({ heading, code }) => {
     <>
       <br />
 
-      <h4>{heading}</h4>
+      <h4 className="codeHeading">{heading}</h4>
 
       <Code code={`${code}`} />
     </>

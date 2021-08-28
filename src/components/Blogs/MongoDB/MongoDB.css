@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.articleHead {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.description {
+  font-size: large;
+  color: rgba(27, 36, 35, 0.658);
+}
+
+.codeHeading {
+  color: rgba(31, 29, 134, 0.712);
+}
+
+.title {
+  color: rgba(0, 0, 0, 0.596);
+  font-weight: bold;
+}
+
+.MuiToolbar-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 670px) {
+  .articleHead {
+    font-weight: 500;
+    font-size: x-large;
+  }
+  .codeHeading {
+    font-size: large;
+    color: rgba(31, 29, 134, 0.712);
+  }
+  .title {
+    font-size: 22px;
+  }
+}
