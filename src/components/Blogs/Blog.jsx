@@ -21,7 +21,7 @@ const Blog = () => {
             <Grid item xs={12} sm={6}>
               <BlogCard />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            {/* <Grid item xs={12} sm={6}>
               <BlogCard />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -35,7 +35,7 @@ const Blog = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <BlogCard />
-            </Grid>
+            </Grid> */}
           </Grid>
         </div>
       </Container>

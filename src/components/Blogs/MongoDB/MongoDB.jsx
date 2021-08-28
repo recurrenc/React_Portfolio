@@ -43,7 +43,7 @@ export default function MongoDB() {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Read Full Artical
+        Read Article
       </Button>
       <Dialog
         fullScreen
@@ -69,7 +69,7 @@ export default function MongoDB() {
 
         <div className="container">
           <h1 className="articleHead">
-            All MongoDb commands you will ever need (MongoDb Cheatsheet)
+            All MongoDB commands you will ever need (Cheatsheet)
           </h1>
           <br />
           <p className="description">
