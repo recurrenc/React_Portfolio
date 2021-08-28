@@ -13,23 +13,6 @@ import CodeTemplate from "./CodeTemplate";
 import "./MongoDB.css";
 import { Container } from "@material-ui/core";
 
-// const exampleCode = `
-// import React, { useState } from "react";
-
-// function Example() {
-//   const [count, setCount] = useState(0);
-
-//   return (
-//     <div>
-//       <p>You clicked {count} times</p>
-//       <button onClick={() => setCount(count + 1)}>
-//         Click me
-//       </button>
-//     </div>
-//   );
-// }
-// `.trim();
-
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "relative",
@@ -98,6 +81,17 @@ export default function MongoDB() {
             I will assume that you are working inside a collection named
             'collection' on a MongoDB database of your choice
           </p>
+
+          <div className="youtube">
+            <iframe
+              src="https://www.youtube.com/embed/Y7doRUeVLYs?rel=0&autoplay=1"
+              title="MongoDB Tutorial"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <br />
 
           <h3 className="title">1. All Database Commands</h3>
           {commands?.database?.map((c, i) => (

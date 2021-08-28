@@ -23,6 +23,15 @@
   color: rgba(0, 0, 0, 0.596);
   font-weight: bold;
 }
+.youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.youtube iframe {
+  width: 640px;
+  height: 360px;
+}
 
 .MuiToolbar-root {
   display: flex;
@@ -41,5 +50,9 @@
   }
   .title {
     font-size: 22px;
+  }
+  .youtube iframe {
+    width: 480px;
+    height: 270px;
   }
 }
