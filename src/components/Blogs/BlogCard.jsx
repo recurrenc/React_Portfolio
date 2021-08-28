@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import ShareIcon from "@material-ui/icons/Share";
 // import MoreVertIcon from "@material-ui/icons/MoreVert";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import MongoDB from "./MongoDB";
+import MongoDB from "./MongoDB/MongoDB";
 
 const useStyles = makeStyles((theme) => ({
   root: {

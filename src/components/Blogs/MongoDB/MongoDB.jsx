@@ -8,6 +8,25 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
+import { commands } from "./commands";
+import CodeTemplate from "./CodeTemplate";
+
+// const exampleCode = `
+// import React, { useState } from "react";
+
+// function Example() {
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <div>
+//       <p>You clicked {count} times</p>
+//       <button onClick={() => setCount(count + 1)}>
+//         Click me
+//       </button>
+//     </div>
+//   );
+// }
+// `.trim();
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -62,6 +81,30 @@ export default function MongoDB() {
             </Typography>
           </Toolbar>
         </AppBar>
+
+        <div className="container">
+          <h1>All MongoDb commands you will ever need (MongoDb Cheatsheet)</h1>
+          <br />
+          <p>
+            In this post, we will see a comprehensive list of all the MongoDB
+            commands you will ever need as a MongoDB beginner. This list covers
+            almost all the most used commands in MongoDB.{" "}
+          </p>
+          <p>
+            I will assume that you are working inside a collection named
+            'comments' on a MongoDB database of your choice
+          </p>
+
+          <h3>1. All Database Commands</h3>
+          {commands?.database?.map((c, i) => (
+            <CodeTemplate code={c.code} heading={c.heading} />
+          ))}
+          <br />
+          <h3>2. All Collection Commands</h3>
+          {commands?.collections?.map((c, i) => (
+            <CodeTemplate code={c.code} heading={c.heading} />
+          ))}
+        </div>
       </Dialog>
     </div>
   );
