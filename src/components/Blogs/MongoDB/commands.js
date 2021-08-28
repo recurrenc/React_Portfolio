@@ -63,7 +63,7 @@ export const commands = {
   { name: "Swajeet Swarankar", language: "C++", team_id: 2 },
   { name: "Yogesh Jangre", language: "C", team_id: 3 },
   { name: "Abhishek Chauhan", language: "Java", team_id: 4 },
-  { name: "Ankit Sindhram", language: "C", team_id: 5 },
+  { name: "Ankit Singh", language: "C", team_id: 5 },
 ]);`,
     },
 
@@ -82,8 +82,8 @@ export const commands = {
     {
       heading: "Find and Update an existing Document",
       code: `db.collection.update(
-  { name: "Ankit Sindhram" },
-  { name: "Ankit Singh Sindhram", language: "C", team_id: 5 }
+  { name: "Ankit Singh" },
+  { name: "Ankit Kumar Singh", language: "C", team_id: 5 }
 );`,
     },
 
