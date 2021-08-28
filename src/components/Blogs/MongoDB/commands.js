@@ -25,7 +25,7 @@ export const commands = {
       code: `show collections`,
     },
     {
-      heading: "Create a collections named 'database'",
+      heading: "Create a collection named 'database'",
       code: `db.createCollection('database')`,
     },
     {
@@ -76,7 +76,7 @@ export const commands = {
       code: `db.collection.find({language:'JavaScript'}).limit(2)`,
     },
     {
-      heading: "Count the Total number of filtered Result Overriding Limit.",
+      heading: "Count the total number of filtered Result Overriding Limit.",
       code: `db.collection.find({language:'JavaScript'}).count()`,
     },
     {
@@ -88,7 +88,7 @@ export const commands = {
     },
 
     {
-      heading: "Increament Operation in MongoDB",
+      heading: "Increment Operation in MongoDB",
       code: `db.collection.update(
   { name: "Sonu Kumar" },
   {
