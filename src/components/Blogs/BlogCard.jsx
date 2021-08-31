@@ -13,7 +13,6 @@ import Typography from "@material-ui/core/Typography";
 import ShareIcon from "@material-ui/icons/Share";
 // import MoreVertIcon from "@material-ui/icons/MoreVert";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import MongoDB from "./MongoDB/MongoDB";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,21 +23,25 @@ const useStyles = makeStyles((theme) => ({
     height: 0,
     paddingTop: "56.25%", // 16:9
   },
-
-  avatar: {
-    backgroundColor: "#14aa53",
-  },
 }));
 
-export default function BlogCard() {
+export default function BlogCard({
+  src,
+  dp,
+  bg,
+  title,
+  publishedAt,
+  shortDescription,
+  comp,
+}) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            DB
+          <Avatar aria-label="recipe" style={{ backgroundColor: bg }}>
+            {dp}
           </Avatar>
         }
         // action={
@@ -46,19 +49,13 @@ export default function BlogCard() {
         //     <MoreVertIcon />
         //   </IconButton>
         // }
-        title="MongoDB Cheatsheet"
-        subheader="August 27, 2021"
+        title={title}
+        subheader={publishedAt}
       />
-      <CardMedia
-        className={classes.media}
-        image="https://1.bp.blogspot.com/-ZP56Swt5XhA/X5lpmXhJpII/AAAAAAAAkF4/wKmWVIpiCsk_2b_nOjAaVvXsqRltXFrmQCLcBGAsYHQ/w400-h225/MongoDB%2BEssentials%2B-%2BUnderstand%2Bthe%2BBasics%2Bof%2BMongoDB%2B-%2BFree%2BUdemy%2Bcourse.png"
-        title="Mongodb Essentials"
-      />
+      <CardMedia className={classes.media} image={src} title={title} />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          In this post, we will see a comprehensive list of all the MongoDB
-          commands you will ever need as a MongoDB beginner. This list covers
-          almost all the most used commands in MongoDB.
+          {shortDescription}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -74,9 +71,7 @@ export default function BlogCard() {
           </a>
         </IconButton>
 
-        <IconButton aria-label="share">
-          <MongoDB />
-        </IconButton>
+        <IconButton aria-label="share">{comp}</IconButton>
       </CardActions>
     </Card>
   );
