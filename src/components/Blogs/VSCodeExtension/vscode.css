@@ -23,6 +23,11 @@
   color: rgba(0, 0, 0, 0.596);
   font-weight: bold;
 }
+
+.snippets {
+  max-height: 80vh;
+  overflow: auto;
+}
 .youtube {
   display: flex;
   justify-content: center;

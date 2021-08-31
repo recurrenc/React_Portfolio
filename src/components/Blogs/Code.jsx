@@ -29,12 +29,12 @@ const LineContent = styled.span`
   display: table-cell;
 `;
 
-const Code = ({ code, lineNumber }) => (
+const Code = ({ code, lineNumber, language }) => (
   <Highlight
     {...defaultProps}
     theme={theme}
     code={code.trim()}
-    language="javascript"
+    language={language || "javascript"}
   >
     {({ className, style, tokens, getLineProps, getTokenProps }) => (
       <Pre className={className} style={style}>
