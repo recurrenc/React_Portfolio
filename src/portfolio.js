@@ -12,7 +12,7 @@ export const greetings = {
 };
 
 export const openSource = {
-  githubUserName: "SonuKumar81800",
+  githubUserName: "0xsonu",
 };
 
 export const contact = {};
@@ -22,8 +22,8 @@ export const socialLinks = {
   facebook: "https://www.facebook.com/sonukumar81800/",
   instagram: "https://www.instagram.com/__.__s.o.n.u__.__/",
   twitter: "https://twitter.com/sonukum27391549",
-  github: "https://github.com/SonuKumar81800",
-  linkedin: "https://www.linkedin.com/in/sonukumar81800/",
+  github: "https://github.com/0xsonu",
+  linkedin: "https://www.linkedin.com/in/0xsonu/",
 };
 
 export const skillsSection = {
@@ -154,7 +154,7 @@ export const educationInfo = [
 
 export const experience = [
   {
-    role: "Web Developer",
+    role: "Web Developer (Club Lead)",
     company: "Developer Student Club",
     companylogo: dsclogo,
     date: "June 2020 – Present",
@@ -165,25 +165,38 @@ export const experience = [
     ],
   },
   {
-    role: "Web Developer",
-    company: "Developer Student Club",
+    role: "FullStack Developer Intern",
+    company: "Boossti",
     companylogo: dsclogo,
-    date: "June 2020 – Present",
-    desc: "Joined Developer Student Club as a Member of Web/Android Club in July 2020.",
+    date: "Dec 2021 – June 2022",
+    desc: "Worked as a FullStack Developer with tech stack MERN.",
     descBullets: [
-      "Feedback System Designed and Developed for Guru Ghasidas University where students can give their feedback about professors. And University Administrator can take Action on the basis of these feedbacks Statistics.",
-      "Manage DSC-GGV official Website and events update.",
+      "Wrote Production-ready code with fluency in modern front-end (React/Next) and backend (Express/Node) framework.",
+      "Used AWS SDK & Amplify in cooperation with continious integration and test automation and supported software reuse and refactoring.",
     ],
   },
   {
-    role: "Web Developer",
-    company: "Developer Student Club",
+    role: "Backend Developer",
+    company: "Dappunk",
     companylogo: dsclogo,
-    date: "June 2020 – Present",
-    desc: "Joined Developer Student Club as a Member of Web/Android Club in July 2020.",
+    date: "May 2023 – Dec 2023",
+    desc: "Worked as a Backend Developer and build robust and scalable infrastructure.",
     descBullets: [
-      "Feedback System Designed and Developed for Guru Ghasidas University where students can give their feedback about professors. And University Administrator can take Action on the basis of these feedbacks Statistics.",
-      "Manage DSC-GGV official Website and events update.",
+      "Integrated Stripe Payment Gateway: Processed online payments seamlessly and securely, expanding financial functionality.",
+      "Integrated Alchemy API: Leveraged robust blockchain infrastructure for reliable and scalable interactions with blockchain networks.",
+      "Implemented WebSockets: Established real-time, bidirectional communication channels for enhanced user experiences and data synchronization.",
+      "Scalable Infrastructure Design and Deployment: Designed and deployed a scalable, secure, and cost-effective backend infrastructure on AWS.",
+    ],
+  },
+  {
+    role: "Assistant System Engineer",
+    company: "Tata Consultancy Services",
+    companylogo: dsclogo,
+    date: "Jan 2024 – Present",
+    desc: "Working as a System Engineer in Ericssion Team",
+    descBullets: [
+      "Java Development: Expertise in designing and implementing Java-based applications, ensuring efficient and scalable solutions.",
+      "System Architecture: Proficient in designing and optimizing system architectures to meet performance, security, and scalability requirements.",
     ],
   },
 ];
@@ -209,6 +222,12 @@ export const projects = [
 ];
 
 export const feedbacks = [
+  {
+    name: "Priya Prajapati",
+    link: "https://www.linkedin.com/in/0xpriya/",
+    feedback:
+      "Sonu is really good at coding and has a creative way of problem solving. He is always willing to tackle new challenges in a creative way.",
+  },
   {
     name: "Dipu Singh",
     link: "https://www.linkedin.com/in/dipu-singh-297b05142/",
